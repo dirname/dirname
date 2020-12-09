@@ -16,4 +16,4 @@
 
 ![Github stats](https://github-readme-stats.vercel.app/api?username=dirname&count_private=true&show_icons=false&&bg_color=30,e96443,904e95&title_color=fff&text_color=fff)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dirname&hide=javascript,html,css&&bg_color=30,e96443,904e95&title_color=fff&text_color=fff&layout=compact)](https://github.com/dirname/dirname)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dirname&langs_count=10&hide=javascript,html,css&&bg_color=30,e96443,904e95&title_color=fff&text_color=fff&layout=compact&card_width=494)](https://github.com/dirname/dirname)
