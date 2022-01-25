@@ -4,7 +4,7 @@
 - :blue_book: Skills currently being learned:
     - Programming language:
         - Rust
-        - Golang
+        - Go
         - C
     -  Database:
         - PostgreSQL
@@ -12,7 +12,6 @@
         - MongoDB    
     - Other basic knowledge about programming.
 - :smile_cat: I have an American shorthair cat as my pet.
-- :yum: I often use `Ah!` as my pronoun.
 - :smile: I want to make friends, learn knowledge, and improve my skills. Criticism and corrections are always welcome.
 
 ![Github stats](https://github-readme-stats.vercel.app/api?username=dirname&count_private=true&show_icons=false&&bg_color=30,e96443,904e95&title_color=fff&text_color=fff)
