@@ -76,6 +76,17 @@ inputs:
     required: false
     description: "Shows the short facts"
     default: "True"
+  
+  SHOW_WAKA_STATS:
+    required: false
+    description: "Shows the waka stats"
+    default: "True"
+
+  SHOW_SPENT_TIME:
+    required: false
+    description: "Shows the week spent time on"
+    default: "True"
+
 
   LOCALE:
     required: false

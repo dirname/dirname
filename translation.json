@@ -16,7 +16,7 @@
     "operating system": "Système d'exploitation",
     "Projects": "Projets",
     "Timezone": "Fuseau horaire",
-    "Contributions in the year": "%s Contributions en %s",
+    "Contributions in the year": "Contributions en %s",
     "Used in GitHub's Storage": "%s Utilisés sur le stockage de GitHub",
     "Opted to Hire": "A choisi d'embaucher",
     "Not Opted to Hire": "N'a pas choisi d'embaucher",
@@ -34,7 +34,10 @@
     "private repository": "%d dépot privé",
     "private repositories": "%d dépots privés",
     "I am an Early": "Je suis un 🐤 du matin",
-    "I am a Night": "Je suis un 🦉 de nuit"
+    "I am a Night": "Je suis un 🦉 de nuit",
+    "Joined": "Joined",
+    "Github's Storage": "Github's Storage",
+    "I usually commit code at": "I usually commit code at %s (%s)"
   },
   "en": {
     "Monday": "Monday",
@@ -44,34 +47,37 @@
     "Friday": "Friday",
     "Saturday": "Saturday",
     "Sunday": "Sunday",
-    "Morning": "Morning",
-    "Daytime": "Daytime",
-    "Evening": "Evening",
-    "Night": "Night",
+    "Morning": "9:00 am - 12:00 noon",
+    "Daytime": "12:00 noon - 6:00 pm",
+    "Evening": "6:00 pm - 12:00 midnight",
+    "Night": "12:00 midnight - 9:00 am",
     "Languages": "Programming Languages",
     "Editors": "Editors",
     "operating system": "Operating System",
     "Projects": "Projects",
     "Timezone": "Time Zone",
-    "Contributions in the year": "%s Contributions in the Year %s",
+    "Contributions in the year": "Contributions in %s",
     "Used in GitHub's Storage": "%s Used in GitHub's Storage",
     "Opted to Hire": "Opted to Hire",
     "Not Opted to Hire": "Not Opted to Hire",
     "Profile Views": "Profile Views",
     "From Hello World I have written": "From Hello World I've Written",
-    "I am Most Productive on": "I'm Most Productive on %s",
+    "I am Most Productive on": "I'm Most Productive on %s (%s)",
     "This Week I Spend My Time On": "This Week I Spent My Time On",
     "I Mostly Code in": "I Mostly Code in %s",
     "Timeline": "Timeline",
     "No Activity Tracked This Week": "No Activity Tracked This Week",
     "My GitHub Data": "My GitHub Data",
-    "Lines of code": "lines of code",
+    "Lines of code": "Lines of code",
     "public repository": "%d Public Repository",
     "public repositories": "%d Public Repositories",
     "private repository": "%d Private Repository",
     "private repositories": "%d Private Repositories",
     "I am an Early": "I'm an Early 🐤",
-    "I am a Night": "I'm a Night 🦉"
+    "I am a Night": "I'm a Night 🦉",
+    "Joined": "Joined",
+    "Github's Storage": "Github's Storage",
+    "I usually commit code at": "I usually commit code at %s (%s)"
   },
   "bn": {
     "Monday": "সোমবার",
@@ -90,7 +96,7 @@
     "operating system": "অপারেটিং সিস্টেম",
     "Projects": "প্রকল্ম",
     "Timezone": "সময় অঞ্চল",
-    "Contributions in the year": "%s টি অবদান সাল %s এ",
+    "Contributions in the year": "টি অবদান সাল %s এ",
     "Used in GitHub's Storage": "%s ব্যবহৃত হয়েছে GitHub এর স্টরেজের",
     "Opted to Hire": "নিয়োগের জন্য প্রস্তুত",
     "Not Opted to Hire": "নিয়োগের জন্য প্রস্তুত নয়",
@@ -108,7 +114,10 @@
     "private repository": "%d টি ব্যক্তিগত Repository",
     "private repositories": "%d টি ব্যক্তিগত Repositories",
     "I am an Early": "আমি হলাম সকালের 🐤",
-    "I am a Night": "আমি হলাম রাতের 🦉"
+    "I am a Night": "আমি হলাম রাতের 🦉",
+    "Joined": "Joined",
+    "Github's Storage": "Github's Storage",
+    "I usually commit code at": "I usually commit code at %s (%s)"
   },
   "it": {
     "Monday": "Lunedì",
@@ -127,7 +136,7 @@
     "operating system": "Sistema operativo",
     "Projects": "Progetti",
     "Timezone": "Fuso orario",
-    "Contributions in the year": "%s Contributi nell'ultimo anno %s",
+    "Contributions in the year": "Contributi nell'ultimo anno %s",
     "Used in GitHub's Storage": "%s Spazio di archiviazione di GitHub utilizzato",
     "Opted to Hire": "Pronto per essere assunto",
     "Not Opted to Hire": "Non disponibile per assunzioni/colloqui",
@@ -145,7 +154,10 @@
     "private repository": "%d Repository privata",
     "private repositories": "%d Repositories private",
     "I am an Early": "Sono un mattiniero 🐤",
-    "I am a Night": "Sono un notturno 🦉"
+    "I am a Night": "Sono un notturno 🦉",
+    "Joined": "Joined",
+    "Github's Storage": "Github's Storage",
+    "I usually commit code at": "I usually commit code at %s (%s)"
   },
   "zh": {
     "Monday": "星期一",
@@ -164,7 +176,7 @@
     "operating system": "操作系统",
     "Projects": "项目",
     "Timezone": "时区",
-    "Contributions in the year": "%s 年贡献了 %s 次",
+    "Contributions in the year": "%s 年贡献次数",
     "Used in GitHub's Storage": " 使用了 %s GitHub 存储空间",
     "Opted to Hire": "开放招聘",
     "Not Opted to Hire": "不开放招聘",
@@ -182,7 +194,10 @@
     "private repository": "%d 个私人仓库",
     "private repositories": "%d 个私人仓库",
     "I am an Early": "我是早起的 🐤",
-    "I am a Night": "我是夜猫子 🦉"
+    "I am a Night": "我是夜猫子 🦉",
+    "Joined": "来到 GitHub",
+    "Github's Storage": "已储存代码",
+    "I usually commit code at": "I usually commit code at %s (%s)"
   },
   "zh_TW": {
     "Monday": "星期一",
@@ -219,7 +234,10 @@
     "private repository": "%d 私人倉庫",
     "private repositories": "%d 私人倉庫",
     "I am an Early": "我是早起的",
-    "I am a Night": "我是夜貓子"
+    "I am a Night": "我是夜貓子",
+    "Joined": "Joined",
+    "Github's Storage": "Github's Storage",
+    "I usually commit code at": "I usually commit code at %s (%s)"
   },
   "ar": {
     "Monday": "الأثنين",
@@ -256,7 +274,10 @@
     "private repository": "%d المستودع الخاص",
     "private repositories": "%d المستودعات الخاصة",
     "I am an Early": "أنا كالعصفور 🐤 في الصباح",
-    "I am a Night": "أنا كالبومة 🦉 في الليل"
+    "I am a Night": "أنا كالبومة 🦉 في الليل",
+    "Joined": "Joined",
+    "Github's Storage": "Github's Storage",
+    "I usually commit code at": "I usually commit code at %s (%s)"
   },
   "pt-BR": {
     "Monday": "Segunda-Feira",
@@ -293,7 +314,10 @@
     "private repository": "%d Repositório Privado",
     "private repositories": "%d Repositórios Privados",
     "I am an Early": "Eu sou diurno 🐤",
-    "I am a Night": "Eu sou noturno 🦉"
+    "I am a Night": "Eu sou noturno 🦉",
+    "Joined": "Joined",
+    "Github's Storage": "Github's Storage",
+    "I usually commit code at": "I usually commit code at %s (%s)"
   },
   "pl": {
     "Monday": "Poniedziałek",
@@ -330,7 +354,10 @@
     "private repository": "%d prywatne repozytorium",
     "private repositories": "%d prywatne repozytoria",
     "I am an Early": "Jestem rannym 🐤",
-    "I am a Night": "Jestem nocną 🦉"
+    "I am a Night": "Jestem nocną 🦉",
+    "Joined": "Joined",
+    "Github's Storage": "Github's Storage",
+    "I usually commit code at": "I usually commit code at %s (%s)"
   },
   "es": {
     "Monday": "Lunes",
@@ -367,7 +394,10 @@
     "private repository": "%d Repositorio Privado",
     "private repositories": "%d Repositorios Privados",
     "I am an Early": "Soy diurno 🐤",
-    "I am a Night": "Soy nocturno 🦉"
+    "I am a Night": "Soy nocturno 🦉",
+    "Joined": "Joined",
+    "Github's Storage": "Github's Storage",
+    "I usually commit code at": "I usually commit code at %s (%s)"
   },
   "gl": {
     "Monday": "Luns",
@@ -404,7 +434,10 @@
     "private repository": "%d Repositorio Privado",
     "private repositories": "%d Repositorios Privados",
     "I am an Early": "Sonche Jalo 🐤",
-    "I am a Night": "Sonche Moucho 🦉"
+    "I am a Night": "Sonche Moucho 🦉",
+    "Joined": "Joined",
+    "Github's Storage": "Github's Storage",
+    "I usually commit code at": "I usually commit code at %s (%s)"
   },
   "ko": {
     "Monday": "월요일",
@@ -441,7 +474,10 @@
     "private repository": "%d개의 Private Repository를 만들었어요.",
     "private repositories": "%d개의 Private Repository를 만들었어요.",
     "I am an Early": "저는 아침형 인간이에요. 🐤",
-    "I am a Night": "저는 저녁형 인간이에요. 🦉"
+    "I am a Night": "저는 저녁형 인간이에요. 🦉",
+    "Joined": "Joined",
+    "Github's Storage": "Github's Storage",
+    "I usually commit code at": "I usually commit code at %s (%s)"
   },
   "tr": {
     "Monday": "Pazartesi",
@@ -478,7 +514,10 @@
     "private repository": "%d Özel Depo",
     "private repositories": "%d Özel Depolar",
     "I am an Early": "Sabah 🐤'yum",
-    "I am a Night": "Gece 🦉'yum"
+    "I am a Night": "Gece 🦉'yum",
+    "Joined": "Joined",
+    "Github's Storage": "Github's Storage",
+    "I usually commit code at": "I usually commit code at %s (%s)"
   },
   "ru": {
     "Monday": "Понедельник",
@@ -515,7 +554,10 @@
     "private repository": "%d Приватный репозиторий",
     "private repositories": "%d Приватных репозиториев",
     "I am an Early": "Я утренняя 🐤",
-    "I am a Night": "Я ночная 🦉"
+    "I am a Night": "Я ночная 🦉",
+    "Joined": "Joined",
+    "Github's Storage": "Github's Storage",
+    "I usually commit code at": "I usually commit code at %s (%s)"
   },
   "de": {
     "Monday": "Montag",
@@ -552,7 +594,10 @@
     "private repository": "%d privates Repository",
     "private repositories": "%d private Repositories",
     "I am an Early": "Ich bin ein Frühaufsteher 🐤",
-    "I am a Night": "Ich bin eine Nachteule 🦉"
+    "I am a Night": "Ich bin eine Nachteule 🦉",
+    "Joined": "Joined",
+    "Github's Storage": "Github's Storage",
+    "I usually commit code at": "I usually commit code at %s (%s)"
   },
   "id": {
     "Monday": "Senin",
@@ -589,7 +634,10 @@
     "private repository": "%d Repositori pribadi",
     "private repositories": "%d Repositori pribadi",
     "I am an Early": "Aku orangnya diurnal 🐤",
-    "I am a Night": "Aku orangnya nokturnal 🦉"
+    "I am a Night": "Aku orangnya nokturnal 🦉",
+    "Joined": "Joined",
+    "Github's Storage": "Github's Storage",
+    "I usually commit code at": "I usually commit code at %s (%s)"
   },
   "ca": {
     "Monday": "Dilluns",
@@ -626,7 +674,10 @@
     "private repository": "%d Repositori privats",
     "private repositories": "%d Repositoris privats",
     "I am an Early": "Sóc diürn 🐤",
-    "I am a Night": "Sóc nocturn 🦉"
+    "I am a Night": "Sóc nocturn 🦉",
+    "Joined": "Joined",
+    "Github's Storage": "Github's Storage",
+    "I usually commit code at": "I usually commit code at %s (%s)"
   },
   "vn": {
     "Monday": "Thứ Hai",
@@ -663,6 +714,9 @@
     "private repository": "%d dự án riêng tư",
     "private repositories": "%d dự án riêng tư",
     "I am an Early": "Tôi không phải cú đêm 🐤",
-    "I am a Night": "Tôi là cú đêm 🦉"
+    "I am a Night": "Tôi là cú đêm 🦉",
+    "Joined": "Joined",
+    "Github's Storage": "Github's Storage",
+    "I usually commit code at": "I usually commit code at %s (%s)"
   }
 }

@@ -53,7 +53,8 @@ commit_username = os.getenv('INPUT_COMMIT_USERNAME')
 commit_email = os.getenv('INPUT_COMMIT_EMAIL')
 show_total_code_time = os.getenv('INPUT_SHOW_TOTAL_CODE_TIME')
 symbol_version = os.getenv('INPUT_SYMBOL_VERSION').strip()
-show_waka_stats = 'y'
+show_waka_stats = os.getenv('INPUT_SHOW_WAKA_STATS')
+show_spent_time = os.getenv('INPUT_SHOW_SPENT_TIME')
 # The GraphQL query to get commit data.
 userInfoQuery = """
 {
@@ -216,6 +217,15 @@ def make_commit_list(data: list):
         data_list.append(op)
     return ' \n'.join(data_list)
 
+def make_day_commit_list(data: list):
+    '''Make List'''
+    data_list = []
+    for l in data[:7]:
+        ln = len(l['name'])
+        ln_text = len(l['text'])
+        op = f"{l['name']}{' ' * (32 - ln)}{l['text']}{' ' * (15 - ln_text)}{make_graph(l['percent'])}   {l['percent']}%"
+        data_list.append(op)
+    return ' \n'.join(data_list)
 
 def generate_commit_list(tz):
     string = ''
@@ -228,10 +238,10 @@ def generate_commit_list(tz):
     nodes = result["data"]["user"]["repositoriesContributedTo"]["nodes"]
     repos = [d for d in nodes if d['isFork'] is False]
 
-    morning = 0  # 6 - 12
+    morning = 0  # 9 - 12
     daytime = 0  # 12 - 18
     evening = 0  # 18 - 24
-    night = 0  # 0 - 6
+    night = 0  # 0 - 9
 
     Monday = 0
     Tuesday = 0
@@ -252,13 +262,13 @@ def generate_commit_list(tz):
                     timezone(tz))
                 hour = date.hour
                 weekday = date.strftime('%A')
-                if 6 <= hour < 12:
+                if 9 <= hour < 12:
                     morning += 1
                 if 12 <= hour < 18:
                     daytime += 1
                 if 18 <= hour < 24:
                     evening += 1
-                if 0 <= hour < 6:
+                if 0 <= hour < 9:
                     night += 1
 
                 if weekday == "Monday":
@@ -281,7 +291,7 @@ def generate_commit_list(tz):
 
     sumAll = morning + daytime + evening + night
     sum_week = Sunday + Monday + Tuesday + Friday + Saturday + Wednesday + Thursday
-    title = translate['I am an Early'] if morning + daytime >= evening + night else translate['I am a Night']
+    title = translate['I usually commit code at'] % ('9:00 am to 6:00 pm' if morning + daytime >= evening + night else '6:00 pm to 9:00 am', tz)
     one_day = [
         {"name": "🌞 " + translate['Morning'], "text": str(morning) + " commits",
          "percent": round((morning / sumAll) * 100, 2)},
@@ -306,7 +316,7 @@ def generate_commit_list(tz):
         {"name": translate['Sunday'], "text": str(Sunday) + " commits", "percent": round((Sunday / sum_week) * 100, 2)},
     ]
 
-    string = string + '**' + title + '** \n\n' + '```text\n' + make_commit_list(one_day) + '\n\n```\n'
+    string = string + '🕰️ **' + title + '** \n\n' + '```text\n' + make_day_commit_list(one_day) + '\n```\n'
 
     if show_days_of_week.lower() in truthy:
         max_element = {
@@ -316,8 +326,8 @@ def generate_commit_list(tz):
         for day in dayOfWeek:
             if day['percent'] > max_element['percent']:
                 max_element = day
-        days_title = translate['I am Most Productive on'] % max_element['name']
-        string = string + '📅 **' + days_title + '** \n\n' + '```text\n' + make_commit_list(dayOfWeek) + '\n\n```\n'
+        days_title = translate['I am Most Productive on'] % (max_element['name'], tz)
+        string = string + '📅 **' + days_title + '** \n\n' + '```text\n' + make_commit_list(dayOfWeek) + '\n```\n'
 
     return string
 
@@ -333,10 +343,10 @@ def get_waka_time_stats():
     else:
         data = request.json()
         if showCommit.lower() in truthy:
-            stats = stats + generate_commit_list(tz=data['data']['timezone']) + '\n\n'
+            stats = stats + generate_commit_list(tz=data['data']['timezone'])
 
-        if showTimeZone.lower() in truthy or showLanguage.lower() in truthy or showEditors.lower() in truthy or \
-                showProjects.lower() in truthy or showOs.lower() in truthy:
+        if show_spent_time.lower() in truthy and (showTimeZone.lower() in truthy or showLanguage.lower() in truthy or showEditors.lower() in truthy or \
+                showProjects.lower() in truthy or showOs.lower() in truthy):
             stats += '📊 **' + translate['This Week I Spend My Time On'] + '** \n\n'
             stats += '```text\n'
 
@@ -434,38 +444,21 @@ def get_line_of_code():
 
 
 def get_short_info(github):
-    string = '**🐱 ' + translate['My GitHub Data'] + '** \n\n'
+    string = ''
     user_info = github.get_user()
+    string += '![Joined](http://img.shields.io/badge/' + quote(str(translate['Joined'])) + '-' + quote(str(humanize.naturaltime(datetime.datetime.now() - user_info.created_at))) + '-6D67E4?style=flat&labelColor=453C67)\n'
     if user_info.disk_usage is None:
         disk_usage = humanize.naturalsize(0)
         print("Please add new github personal access token with user permission")
     else:
         disk_usage = humanize.naturalsize(user_info.disk_usage)
+    string += '![Disk Usage](http://img.shields.io/badge/' + quote(str(translate["Github's Storage"])) + '-' + quote(str(humanize.naturalsize(g.get_user().disk_usage * 1024))) + '-FD841F?style=flat&labelColor=E14D2A)\n'
     request = requests.get('https://github-contributions.vercel.app/api/v1/' + user_info.login)
     if request.status_code == 200:
         data = request.json()
         total = data['years'][0]['total']
         year = data['years'][0]['year']
-        string += '> 🏆 ' + translate['Contributions in the year'] % (humanize.intcomma(total), year) + '\n > \n'
-
-    string += '> 📦 ' + translate["Used in GitHub's Storage"] % disk_usage + ' \n > \n'
-    is_hireable = user_info.hireable
-    public_repo = user_info.public_repos
-    private_repo = user_info.owned_private_repos
-    if private_repo is None:
-        private_repo = 0
-    if is_hireable:
-        string += "> 💼 " + translate["Opted to Hire"] + "\n > \n"
-    else:
-        string += "> 🚫 " + translate["Not Opted to Hire"] + "\n > \n"
-
-    string += '> 📜 '
-    string += translate['public repositories'] % public_repo + " " + '\n > \n' if public_repo != 1 else translate[
-                                                                                                            'public repository'] % public_repo + " " + '\n > \n'
-    string += '> 🔑 '
-    string += translate['private repositories'] % private_repo + " " + ' \n > \n' if private_repo != 1 else translate[
-                                                                                                                'private repository'] % private_repo + " " + '\n > \n'
-
+        string += '![Contributions](http://img.shields.io/badge/' + quote(str(translate['Contributions in the year'] % (year))) + '-' + humanize.intcomma(total) + '-7DCE13?style=flat&labelColor=2B7A0B)\n'
     return string
 
 
@@ -479,6 +472,9 @@ def get_stats(github):
         # This condition is written to calculate the lines of code because it is heavy process soo needs to be calculate once this will reduce the execution time
         yearly_data = get_yearly_data()
 
+    if show_short_info.lower() in truthy:
+        stats += get_short_info(github)
+
     if show_total_code_time.lower() in truthy:
         request = requests.get(
             f"https://wakatime.com/api/v1/users/current/all_time_since_today?api_key={waka_key}")
@@ -490,20 +486,21 @@ def get_stats(github):
             data = request.json()
             stats += '![Code Time](http://img.shields.io/badge/' + quote(
                 str("Code Time")) + '-' + quote(str(
-                data['data']['text'])) + '-blue)\n\n'
+                data['data']['text'])) + '-blue?style=flat)\n'
+            if not (show_profile_view.lower() in truthy or show_loc.lower() in truthy):
+                stats += '\n'
 
     if show_profile_view.lower() in truthy:
         data = run_v3_api(get_profile_view.substitute(owner=username, repo=username))
         stats += '![Profile Views](http://img.shields.io/badge/' + quote(str(translate['Profile Views'])) + '-' + str(
-            data['count']) + '-blue)\n\n'
+            data['count']) + '-3AB4F2?style=flat&labelColor=0078AA)\n'
+        if not (show_total_code_time.lower() in truthy or show_loc.lower() in truthy):
+            stats += '\n'
 
     if show_loc.lower() in truthy:
         stats += '![Lines of code](https://img.shields.io/badge/' + quote(
-            str(translate['From Hello World I have written'])) + '-' + quote(
-            str(get_line_of_code())) + '%20' + quote(str(translate['Lines of code'])) + '-blue)\n\n'
-
-    if show_short_info.lower() in truthy:
-        stats += get_short_info(github)
+            str(translate['Lines of code'])) + '-' + quote(
+            str(get_line_of_code())) + '%20' + quote(str(translate['Lines of code'])) + '-FF8B8B?style=flat&labelColor=EB4747)\n\n'
 
     if show_waka_stats.lower() in truthy:
         stats += get_waka_time_stats()
