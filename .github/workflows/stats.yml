@@ -27,5 +27,5 @@ jobs:
           SHOW_COMMIT: "True"
           SHOW_LANGUAGE_PER_REPO: "False"
           SHOW_UPDATED_DATE: "False"
-          SHOW_WAKA_STATS: "False"
+          SHOW_WAKA_STATS: "True"
           COMMIT_EMAIL: ${{ secrets.COMMIT_EMAIL }}

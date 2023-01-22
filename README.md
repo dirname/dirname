@@ -3,11 +3,11 @@
 I'm a non-major programming learner, and I'm learning and consolidating the foundation of programming.
 
 <!--START_SECTION:waka-->
-![Joined](http://img.shields.io/badge/Joined-6%20years%20ago-blue)
-![Disk Usage](http://img.shields.io/badge/Github%27s%20Storage-577.9%20MB-blue)
-![Contributions](http://img.shields.io/badge/48-Contributions%20in%20the%20Year%202023-blue)
-![Profile Views](http://img.shields.io/badge/Profile%20Views-591-blue)
-![Lines of code](https://img.shields.io/badge/lines%20of%20code-2%20Million%20lines%20of%20code-blue)
+![Joined](http://img.shields.io/badge/Joined-6%20years%20ago-blue?style=flat)
+![Disk Usage](http://img.shields.io/badge/Github%27s%20Storage-577.9%20MB-blue?style=flat)
+![Contributions](http://img.shields.io/badge/Contributions%20in%202023-47-blue?style=flat)
+![Profile Views](http://img.shields.io/badge/Profile%20Views-591-blue?style=flat)
+![Lines of code](https://img.shields.io/badge/Lines%20of%20code-2%20Million%20Lines%20of%20code-blue?style=flat)
 
 <!--END_SECTION:waka-->
 
