@@ -5,7 +5,7 @@ I'm a non-major programming learner, and I'm learning and consolidating the foun
 <!--START_SECTION:waka-->
 ![Joined](http://img.shields.io/badge/Joined-7%20years%20ago-6D67E4?style=flat&labelColor=453C67)
 ![Disk Usage](http://img.shields.io/badge/Github%27s%20Storage-604.6%20MB-FD841F?style=flat&labelColor=E14D2A)
-![Contributions](http://img.shields.io/badge/Contributions%20in%202023-622-7DCE13?style=flat&labelColor=2B7A0B)
+![Contributions](http://img.shields.io/badge/Contributions%20in%202023-623-7DCE13?style=flat&labelColor=2B7A0B)
 ![Profile Views](http://img.shields.io/badge/Profile%20Views-0-3AB4F2?style=flat&labelColor=0078AA)
 ![Lines of code](https://img.shields.io/badge/Lines%20of%20code-2%20Million%20Lines%20of%20code-FF8B8B?style=flat&labelColor=EB4747)
 
@@ -20,10 +20,10 @@ I'm a non-major programming learner, and I'm learning and consolidating the foun
 📅 **I'm Most Productive on Thursday (UTC)** 
 
 ```text
-Monday       63 commits     ████░░░░░░░░░░░░░░░░░░░░░   15.91% 
+Monday       62 commits     ████░░░░░░░░░░░░░░░░░░░░░   15.66% 
 Tuesday      59 commits     ███░░░░░░░░░░░░░░░░░░░░░░   14.9% 
 Wednesday    39 commits     ██░░░░░░░░░░░░░░░░░░░░░░░   9.85% 
-Thursday     69 commits     ████░░░░░░░░░░░░░░░░░░░░░   17.42% 
+Thursday     70 commits     ████░░░░░░░░░░░░░░░░░░░░░   17.68% 
 Friday       58 commits     ███░░░░░░░░░░░░░░░░░░░░░░   14.65% 
 Saturday     55 commits     ███░░░░░░░░░░░░░░░░░░░░░░   13.89% 
 Sunday       53 commits     ███░░░░░░░░░░░░░░░░░░░░░░   13.38%
