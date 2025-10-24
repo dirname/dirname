@@ -22,8 +22,8 @@ I'm a non-major programming learner, and I'm learning and consolidating the foun
 ```text
 Monday       17 commits     ███░░░░░░░░░░░░░░░░░░░░░░   15.45% 
 Tuesday      15 commits     ███░░░░░░░░░░░░░░░░░░░░░░   13.64% 
-Wednesday    14 commits     ███░░░░░░░░░░░░░░░░░░░░░░   12.73% 
-Thursday     19 commits     ████░░░░░░░░░░░░░░░░░░░░░   17.27% 
+Wednesday    13 commits     ███░░░░░░░░░░░░░░░░░░░░░░   11.82% 
+Thursday     20 commits     ████░░░░░░░░░░░░░░░░░░░░░   18.18% 
 Friday       18 commits     ████░░░░░░░░░░░░░░░░░░░░░   16.36% 
 Saturday     14 commits     ███░░░░░░░░░░░░░░░░░░░░░░   12.73% 
 Sunday       13 commits     ███░░░░░░░░░░░░░░░░░░░░░░   11.82%
